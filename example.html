@@ -1,0 +1,27 @@
+<!-- <audio> player without controls! Must have id="player" -->
+<audio id="player"  src="http://s1.thekrzos.eu:8700/;stream.mp3" type="audio/mpeg" autoplay="" loop=""></audio>
+<!-- Under player get a link to .js -->
+<script src="23jsplayer.js"></script>
+<!--
+	We can have a many music's, but we need to get a onlick="play()" to start with parameters
+	First example have a link to MP3, second have a radio steam
+-->
+
+<a href="#" onclick="play('http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3','Sample1')">Sample 1</a><br />
+
+<a href="#" onclick="play('http://s1.thekrzos.eu:8700/;stream.mp3','Music Stream')">Music Stream</a><br />
+
+<!--
+	play() must to have a 2 parameters. 1st is url to music, and 2nd is a title
+	We have function pause(). This function remove a link from <audio>
+-->
+<a href="#" onclick="pause()">PAUSE</a><br />
+
+<!-- To get a title, we need a id="kanal" -->
+Now playing <p id="kanal">Title</p>
+
+<!-- Need to change a volume? No problem! -->
+
+<a href="#" onclick="volup()">Volume UP</a><br /> <!-- This onclick push up a volume -->
+<a href="#" onclick="voldown()">Volume Down</a><br /> <!-- This onclick push down a volume -->
+<p id="vol">100</p> <!-- This id show us a current volume in %-->
